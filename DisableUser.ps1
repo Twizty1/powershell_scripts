@@ -45,7 +45,7 @@ $Confirm = Read-Host "Y or N"
     if ($TermUser.distinguishedName -ne $NULL -and $Confirm -eq "Y"){
     Write-Host " "
     Write-Host "Moving user to Disabled Users OU"
-    move-adobject -Identity "$($TermUser.distinguishedName)" -TargetPath "OU=Users,OU=Disabled,DC=bhs,DC=local"
+    move-adobject -Identity "$($TermUser.distinguishedName)" -TargetPath "MODIFY WITH DESTINATION OU IN DN FORMAT"
     Write-Host " "
     Write-Host "Setting account to Disabled"
     disable-adaccount -identity "$($TermUser.SamAccountName)"
