@@ -19,7 +19,7 @@ $emailFrom = "SENDEREMAIL@GOESHERE"
 $emailSubject = "File Log for $($Today)"
 $SmtpServer = "EMAIL SERVER GOES HERE"
 
-#If setting a manual printer, change line 33 to Out-Printer -Name $LogPrinter -InputObject $Docs.
+#If setting a manual printer, change line 36 to Out-Printer -Name $LogPrinter -InputObject $Docs.
 #Otherwise it will use the users default printer.
 $LogPrinter = "PATH TO PRINTER IF YOU SET MANUALLY"
 
